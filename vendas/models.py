@@ -6,5 +6,5 @@ class Venda(models.Model):
     desconto = models.IntegerField()
     valor_total = models.DecimalField(max_digits=10, decimal_places=2)
     
-    formas_pagamento = (('BOLETO', 'Boleto'), ('CARTAO', 'Cartão'))
+    formas_pagamento = (('BOLETO', 'Boleto'), ('CARTAO', 'Cartão'), ('DINHEIRO', 'Dinheiro'), ('',''))
     forma_pagamento = models.CharField(max_length=50, choices=formas_pagamento)
